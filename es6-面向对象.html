@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		
+		//构造函数一个功能
+		class Person{
+			//构造器
+			constructor(name,age){
+				this.name=name,
+				this.age=age
+			}
+			showthis(){
+				alert(this.name)
+			}
+			showAge(){
+				alert(this.age);
+			}
+		}
+
+		//把新建的方法加入到以前的对象上面 原则 在不改变原有对象的方法基础之上。
+		class Worker extends Person{
+			constructor(name,age,job){
+				super(name,age);
+				this.job=job;
+			}
+			showJob(){
+				alert(this.job);
+			}
+		}
+
+		//new Person('小花',16).showAge();
+
+
+		//new Worker('小米',6,'厨子').showJob();
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
